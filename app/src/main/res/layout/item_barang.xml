@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="barang"
+            type="com.android.livedatarenoch4.ListBarang" />
+    </data>
+<androidx.cardview.widget.CardView
+    android:backgroundTint="@color/teal_200"
+    app:cardCornerRadius="15dp"
+    android:elevation="5dp"
+    android:layout_marginBottom="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvPName"
+            android:text="@{barang.nama}"
+            android:layout_below="@id/ivImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvPrice"
+            android:text="@{barang.harga}"
+            android:layout_below="@+id/tvPName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvSeller"
+            android:text="@{barang.seller}"
+            android:layout_below="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/ivImg"
+            android:src="@{barang.img}"
+            android:layout_width="195dp"
+            android:layout_height="195dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>

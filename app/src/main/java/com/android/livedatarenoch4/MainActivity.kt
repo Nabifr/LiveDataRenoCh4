@@ -29,9 +29,9 @@ lateinit var barangViewModel: BarangViewModel
             adapterBarang.getDataBarang(it as ArrayList<ListBarang>)
         })
 
-
         binding.rvProduct.adapter = adapterBarang
-        val lm = GridLayoutManager(this,2)
+        //perubahan kolom menjadi 3
+        val lm = GridLayoutManager(this,3)
         binding.rvProduct.layoutManager = lm
 
     }
